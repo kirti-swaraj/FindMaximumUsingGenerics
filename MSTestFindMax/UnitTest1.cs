@@ -89,5 +89,73 @@ namespace MSTestFindMax
             //Assert
             Assert.AreEqual(expected, actual);
         }
+        /// <summary>
+        /// UC 3.1 : Given the maximum string at first position returns the same string.
+        /// </summary>
+        [TestMethod]
+        public void GivenMaxStringAtFirstPos_ReturnTheSameNumber()
+        {
+            //Arrange
+            string expected = "Kirti";
+            //Act
+            string actual = FindMaximum.MaxStringAmongThree("Kirti", "Appy", "Cat");
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+        /// <summary>
+        /// UC 3.2 : Given the maximum string at second position returns the same string.
+        /// </summary>
+        [TestMethod]
+        public void GivenMaxStringAtSecondPos_ReturnTheSameNumber()
+        {
+            //Arrange
+            string expected = "Zebra";
+            //Act
+            string actual = FindMaximum.MaxStringAmongThree("Kirti", "Zebra", "Rat");
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+        /// <summary>
+        /// UC 3.3 : Given the maximum string at third position returns the same string.
+        /// </summary>
+        [TestMethod]
+        public void GivenMaxStringAtThirdPos_ReturnTheSameNumber()
+        {
+            //Arrange
+            string expected = "Zebra";
+            //Act
+            string actual = FindMaximum.MaxStringAmongThree("Kirti", "Appy", "Zebra");
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        /// <summary>
+        /// UC 3 : Refactor 1 : Added Generic Method
+        /// </summary>
+        [TestMethod]
+        public void UC3Refactor1()
+        {
+            //Arrange
+            string expected = "Zebra";
+            //Act
+            string actual = FindMaximum.MaxValueAmongThreeRefactor1<string>("Kirti", "Appy", "Zebra");
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        /// <summary>
+        /// UC 3 : Refactor 2 : Added Generic Class
+        /// </summary>
+        [TestMethod]
+        public void UC3Refactor2()
+        {
+            //Arrange
+            double expected = 95.67;
+            GenericMaximum<double> maxFloat = new GenericMaximum<double>(25.34, 95.67, 58.64);
+            //Act
+            double actual = maxFloat.MaxMethod();
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
