@@ -12,8 +12,10 @@ namespace GenericsTestMaximum
     {
         static void Main(string[] args)
         {
-            /// Finds max among the given three data
+            ///UC 1 : Finds max among the given three data
             Console.WriteLine(FindMaximum.MaxIntegerAmongThree(89, 12, 50));
+            /// UC 2 : Finds the max float value among three
+            Console.WriteLine(FindMaximum.MaxFloatAmongThree(6.986, 6.64, 6.948));
         }
     }
 }
