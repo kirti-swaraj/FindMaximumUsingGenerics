@@ -63,5 +63,13 @@ namespace GenericsTestMaximum
                 var maxValue = MaxValue(this.value);
                 return maxValue;
             }
+        /// <summary>
+        /// UC 5 : Prints the maximum value.
+        /// </summary>
+        public void PrintMaxValue()
+        {
+            var max = MaxValue(this.value);
+            Console.WriteLine("Maximum value is: {0}", max);
         }
     }
+}
